@@ -1,6 +1,6 @@
 {% set pkgname = "gnuplot" %}
-{% set version = "5.0.5" %}
-{% set sha256 = "25f3e0bf192e01115c580f278c3725d7a569eb848786e12b455a3fda70312053" %}
+{% set version = "5.0.6" %}
+{% set sha256 = "5bbe4713e555c2e103b7d4ffd45fca69551fff09cf5c3f9cb17428aaacc9b460" %}
 
 package:
   name: {{ pkgname }}
@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - gcc  # [linux]
+    - toolchain
     - pkgconfig
     - ncurses 5.9*
     - readline 6.2*
@@ -26,7 +26,6 @@ requirements:
     - qt 5.6.*
     - pango 1.40.*
   run:
-    - libgcc  # [linux]
     - ncurses 5.9*
     - readline 6.2*
     - libgd
