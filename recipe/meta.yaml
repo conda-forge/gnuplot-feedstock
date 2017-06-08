@@ -40,6 +40,8 @@ test:
   commands:
     - gnuplot -e "set terminal dumb; set style histogram; p 'test-data.txt'"
     - gnuplot -e "set terminal png"
+    - conda inspect linkages -p $PREFIX gnuplot  # [not win]
+    - conda inspect objects -p $PREFIX gnuplot   # [osx]
 
 about:
   home: https://github.com/gnuplot/gnuplot
