@@ -1,12 +1,14 @@
 #!/bin/bash
 
+export CXXFLAGS="$CXXFLAGS -std=c++11"
+
 ./configure \
 	--prefix=$PREFIX \
 	--without-x \
 	--without-lua \
 	--without-latex \
 	--without-libcerf \
-	--with-qt=qt4 \
+	--with-qt=qt5 \
 	--with-readline=$PREFIX \
 	--without-tutorial
 

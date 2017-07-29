@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - toolchain
+    - toolchain3
     - pkgconfig
     - ncurses 5.9*
     - readline 6.2*
