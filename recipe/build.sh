@@ -1,15 +1,21 @@
 #!/bin/bash
 
-opts="
-    --without-x \
-    --without-lua \
-    --without-latex \
-    --without-libcerf \
-    --with-qt=qt5
-    --with-readline=$PREFIX
-    "
+export CXXFLAGS="$CXXFLAGS -std=c++11"
 
-LDFLAGS="-Wl,-rpath,$PREFIX/lib $LDFLAGS" LIBS="-liconv" ./configure --prefix=$PREFIX $opts
+if [ "$(uname)" == "Linux" ]
+then
+	export LDFLAGS="$LDFLAGS -L $PREFIX/lib -liconv"
+fi
+
+./configure \
+	--prefix=$PREFIX \
+	--without-x \
+	--without-lua \
+	--without-latex \
+	--without-libcerf \
+	--with-qt=qt5 \
+	--with-readline=$PREFIX \
+	--without-tutorial
 
 export GNUTERM=dumb
 make PREFIX=$PREFIX
