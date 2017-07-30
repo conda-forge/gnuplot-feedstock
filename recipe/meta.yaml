@@ -10,6 +10,8 @@ source:
   fn: {{ pkgname }}-{{ version }}.tar.gz
   url: https://sourceforge.net/projects/{{ pkgname }}/files/{{ pkgname }}/{{ version }}/{{ pkgname }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - patches/term_include.patch
 
 build:
   number: 2
