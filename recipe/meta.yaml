@@ -1,6 +1,6 @@
 {% set pkgname = "gnuplot" %}
-{% set version = "5.0.6" %}
-{% set sha256 = "5bbe4713e555c2e103b7d4ffd45fca69551fff09cf5c3f9cb17428aaacc9b460" %}
+{% set version = "5.2.0" %}
+{% set sha256 = "7dfe6425a1a6b9349b1fb42dae46b2e52833b13e807a78a613024d6a99541e43" %}
 
 package:
   name: {{ pkgname }}
@@ -14,21 +14,21 @@ source:
     - patches/term_include.patch
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win]
 
 requirements:
   build:
     - toolchain3
     - pkgconfig
-    - ncurses 5.9*
+    - ncurses 5.9
     - readline 6.2*
     - libgd
     - cairo 1.14.*
     - qt 5.6.*
     - pango 1.40.*
   run:
-    - ncurses 5.9*
+    - ncurses 5.9
     - readline 6.2*
     - libgd
     - cairo 1.14.*
