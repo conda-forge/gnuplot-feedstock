@@ -7,14 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ pkgname }}-{{ version }}.tar.gz
   url: https://sourceforge.net/projects/{{ pkgname }}/files/{{ pkgname }}/{{ version }}/{{ pkgname }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - patches/term_include.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -22,18 +21,22 @@ requirements:
     - toolchain3
     - pkgconfig
     - ncurses 5.9
-    - readline 6.2*
+    - readline 7.0
     - libgd
     - cairo 1.14.*
-    - qt 5.6.*
     - pango 1.40.*
+    - qt 5.6.*
+    - freetype 2.8.1
+    - glib 2.55.*
   run:
     - ncurses 5.9
-    - readline 6.2*
+    - readline 7.0
     - libgd
     - cairo 1.14.*
-    - qt 5.6.*
     - pango 1.40.*
+    - qt 5.6.*
+    - freetype 2.8.1
+    - glib 2.55.*
 
 test:
   files:
@@ -41,8 +44,8 @@ test:
   commands:
     - gnuplot -e "set terminal dumb; set style histogram; p 'test-data.txt'"
     - gnuplot -e "set terminal png"
-    - conda inspect linkages -p $PREFIX gnuplot  # [not win]
-    - conda inspect objects -p $PREFIX gnuplot   # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME   # [osx]
 
 about:
   home: https://github.com/gnuplot/gnuplot
