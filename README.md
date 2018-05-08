@@ -20,10 +20,10 @@ Current build status
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-gnuplot-green.svg)](https://anaconda.org/conda-forge/gnuplot)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gnuplot.svg)](https://anaconda.org/conda-forge/gnuplot)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/gnuplot.svg)](https://anaconda.org/conda-forge/gnuplot)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gnuplot.svg)](https://anaconda.org/conda-forge/gnuplot)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-gnuplot-green.svg)](https://anaconda.org/conda-forge/gnuplot) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gnuplot.svg)](https://anaconda.org/conda-forge/gnuplot) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gnuplot.svg)](https://anaconda.org/conda-forge/gnuplot) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gnuplot.svg)](https://anaconda.org/conda-forge/gnuplot) |
 
 Installing gnuplot
 ==================
