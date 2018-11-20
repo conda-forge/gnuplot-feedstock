@@ -49,7 +49,7 @@ requirements:
     - xorg-libX11  # [linux]
     - xorg-libxt  # [linux]
     - xorg-libxext  # [linux]
-    - chrpath  #  [linux]
+    - chrpath  # [linux]
     - xorg-libxrender  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
