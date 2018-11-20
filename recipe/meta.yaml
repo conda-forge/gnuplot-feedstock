@@ -37,6 +37,7 @@ requirements:
     - xorg-libxrender  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
+    - mesalib  # [linux]
   run:
     - ncurses
     - readline
@@ -53,6 +54,7 @@ requirements:
     - xorg-libxrender  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
+    - mesalib  # [linux]
 
 test:
   files:
