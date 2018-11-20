@@ -18,9 +18,9 @@ build:
 
 requirements:
   build:
-    - pkgconfig
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - pkg-config
   host:
     - ncurses
     - readline
