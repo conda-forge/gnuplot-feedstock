@@ -21,6 +21,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
     - pkg-config
   host:
     - ncurses
@@ -38,7 +43,6 @@ requirements:
     - xorg-libxrender  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
-    - mesalib  # [linux]
   run:
     - ncurses
     - readline
