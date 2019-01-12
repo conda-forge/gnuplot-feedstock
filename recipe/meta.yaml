@@ -26,6 +26,11 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxcb') }}  # [linux]
+    - {{ cdt('expat') }}  # [linux]
+    - {{ cdt('libxext') }}  # [linux]
+    - {{ cdt('libxrender') }}  # [linux]
+    - {{ cdt('libxt') }}  # [linux]
     - pkg-config
   host:
     - ncurses
@@ -41,6 +46,7 @@ requirements:
     - xorg-libxext  # [linux]
     - chrpath  # [linux]
     - xorg-libxrender  # [linux]
+    - libxcb  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
   run:
