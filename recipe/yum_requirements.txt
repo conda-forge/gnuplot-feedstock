@@ -1,0 +1,11 @@
+mesa-libgl
+mesa-dri-drivers
+libselinux
+libxdamage
+libxfixes
+libxxf86vm
+libxcb
+expat
+libxext
+libxrender
+libxt
