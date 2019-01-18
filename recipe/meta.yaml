@@ -13,7 +13,7 @@ source:
 #    - patches/term_include.patch
 
 build:
-  number: 1000
+  number: 1
   skip: True  # [win]
 
 requirements:
