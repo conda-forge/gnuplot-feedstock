@@ -1,10 +1,10 @@
-mesa-libGl
+mesa-libGL
 mesa-dri-drivers
 libselinux
 libXdamage
 libXfixes
 libXxf86vm
-libXcb
+libxcb
 expat
 libXext
 libXrender
