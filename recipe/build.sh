@@ -10,7 +10,6 @@ fi
 
 ./configure \
 	--prefix=$PREFIX \
-	--without-x \
 	--without-lua \
 	--without-latex \
 	--without-libcerf \
