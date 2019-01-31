@@ -29,6 +29,7 @@ requirements:
     - {{ cdt('libxext') }}  # [linux]
     - {{ cdt('libxrender') }}  # [linux]
     - {{ cdt('libxt') }}  # [linux]
+    - {{ cdt('libx11-devel') }}  # [linux]
     - pkg-config
   host:
     - ncurses

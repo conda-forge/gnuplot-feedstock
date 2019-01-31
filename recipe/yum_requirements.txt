@@ -9,3 +9,4 @@ expat
 libXext
 libXrender
 libXt
+libX11
