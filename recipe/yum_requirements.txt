@@ -10,3 +10,4 @@ libXext
 libXrender
 libXt
 libX11
+xorg-x11-proto
