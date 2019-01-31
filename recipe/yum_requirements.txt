@@ -6,8 +6,4 @@ libXfixes
 libXxf86vm
 libxcb
 expat
-libXext
-libXrender
-libXt
-libX11
 xorg-x11-proto
