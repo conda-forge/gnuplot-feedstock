@@ -19,5 +19,5 @@ fi
 
 export GNUTERM=dumb
 make PREFIX=$PREFIX
-#make check PREFIX=$PREFIX
+make check PREFIX=$PREFIX
 make install PREFIX=$PREFIX
