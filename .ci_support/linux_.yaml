@@ -1,1 +1,41 @@
-{}
+c_compiler:
+- gcc
+cairo:
+- '1.16'
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+dbus:
+- '1'
+docker_image:
+- condaforge/linux-anvil-comp7
+freetype:
+- 2.9.1
+glib:
+- '2.58'
+ncurses:
+- '6.1'
+pango:
+- '1.40'
+pin_run_as_build:
+  cairo:
+    max_pin: x.x
+  dbus:
+    max_pin: x
+  freetype:
+    max_pin: x
+  ncurses:
+    max_pin: x.x
+  pango:
+    max_pin: x.x
+  qt:
+    max_pin: x.x
+  readline:
+    max_pin: x
+qt:
+- '5.6'
+readline:
+- '7.0'

@@ -1,6 +1,6 @@
 {% set pkgname = "gnuplot" %}
-{% set version = "5.2.3" %}
-{% set sha256 = "feb58c9358d9d129e00507f3b34d4b13c4caea3f004325c587f8caafe5dbe724" %}
+{% set version = "5.2.5" %}
+{% set sha256 = "039db2cce62ddcfd31a6696fe576f4224b3bc3f919e66191dfe2cdb058475caa" %}
 
 package:
   name: {{ pkgname }}
@@ -9,34 +9,62 @@ package:
 source:
   url: https://sourceforge.net/projects/{{ pkgname }}/files/{{ pkgname }}/{{ version }}/{{ pkgname }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - patches/term_include.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
-    - toolchain3
-    - pkgconfig
-    - ncurses 5.9
-    - readline 7.0
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux]
+    - {{ cdt('libxcb') }}  # [linux]
+    - {{ cdt('expat') }}  # [linux]
+    - {{ cdt('libxext') }}  # [linux]
+    - {{ cdt('libxrender') }}  # [linux]
+    - {{ cdt('libxt') }}  # [linux]
+    - {{ cdt('libx11-devel') }}  # [linux]
+    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - pkg-config
+  host:
+    - ncurses
+    - readline
     - libgd
-    - cairo 1.14.*
-    - pango 1.40.*
-    - qt 5.6.*
-    - freetype 2.8.1
-    - glib 2.55.*
+    - cairo
+    - pango
+    - qt
+    - freetype
+    - glib
+    - xorg-libX11  # [linux]
+    - xorg-libxt  # [linux]
+    - xorg-libxext  # [linux]
+    - chrpath  # [linux]
+    - xorg-libxrender  # [linux]
+    - libxcb  # [linux]
+    - gtk2  # [linux]
+    - dbus  # [linux]
   run:
-    - ncurses 5.9
-    - readline 7.0
+    - ncurses
+    - readline
     - libgd
-    - cairo 1.14.*
-    - pango 1.40.*
-    - qt 5.6.*
-    - freetype 2.8.1
-    - glib 2.55.*
+    - cairo
+    - pango
+    - qt
+    - freetype
+    - glib
+    - xorg-libX11  # [linux]
+    - xorg-libxt  # [linux]
+    - xorg-libxext  # [linux]
+    - chrpath  # [linux]
+    - xorg-libxrender  # [linux]
+    - gtk2  # [linux]
+    - dbus  # [linux]
 
 test:
   files:

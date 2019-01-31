@@ -7,9 +7,9 @@ then
 	export LDFLAGS="$LDFLAGS -L $PREFIX/lib -liconv"
 fi
 
+
 ./configure \
 	--prefix=$PREFIX \
-	--without-x \
 	--without-lua \
 	--without-latex \
 	--without-libcerf \
