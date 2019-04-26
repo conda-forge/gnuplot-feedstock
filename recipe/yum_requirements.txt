@@ -4,6 +4,5 @@ libselinux
 libXdamage
 libXfixes
 libXxf86vm
-libxcb
 expat
 xorg-x11-proto
