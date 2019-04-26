@@ -24,13 +24,13 @@ requirements:
     - {{ cdt('libxdamage') }}  # [linux]
     - {{ cdt('libxfixes') }}  # [linux]
     - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxcb') }}  # [linux]
     - {{ cdt('expat') }}  # [linux]
     - {{ cdt('libxext') }}  # [linux]
     - {{ cdt('libxrender') }}  # [linux]
     - {{ cdt('libxt') }}  # [linux]
     - {{ cdt('libx11-devel') }}  # [linux]
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
+    - libxcb  # [linux]
     - pkg-config
   host:
     - ncurses
