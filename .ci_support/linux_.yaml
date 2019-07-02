@@ -42,4 +42,4 @@ pin_run_as_build:
 qt:
 - '5.9'
 readline:
-- '7.0'
+- '8.0'
