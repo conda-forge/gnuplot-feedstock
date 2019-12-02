@@ -1,6 +1,6 @@
 {% set pkgname = "gnuplot" %}
-{% set version = "5.2.7" %}
-{% set sha256 = "97fe503ff3b2e356fe2ae32203fc7fd2cf9cef1f46b60fe46dc501a228b9f4ed" %}
+{% set version = "5.2.8" %}
+{% set sha256 = "60a6764ccf404a1668c140f11cc1f699290ab70daa1151bb58fed6139a28ac37" %}
 
 package:
   name: {{ pkgname }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win]
 
 requirements:
