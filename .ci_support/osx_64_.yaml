@@ -17,7 +17,7 @@ cxx_compiler_version:
 freetype:
 - '2'
 glib:
-- '2.58'
+- '2.66'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:
