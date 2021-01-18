@@ -10,7 +10,7 @@ source:
   sha256: 6b690485567eaeb938c26936e5e0681cf70c856d273cc2c45fabf64d8bc6590e
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -71,8 +71,6 @@ test:
   commands:
     - gnuplot -e "set terminal dumb; set style histogram; p 'test-data.txt'"
     - gnuplot -e "set terminal png"
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME   # [osx]
 
 about:
   home: https://github.com/gnuplot/gnuplot
