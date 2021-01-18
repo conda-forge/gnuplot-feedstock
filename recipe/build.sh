@@ -1,13 +1,5 @@
 #!/bin/bash
 
-export CXXFLAGS="$CXXFLAGS -std=c++11"
-
-if [ "$(uname)" == "Linux" ]
-then
-	export LDFLAGS="$LDFLAGS -L $PREFIX/lib -liconv"
-fi
-
-
 ./configure \
 	--prefix=$PREFIX \
 	--without-lua \
@@ -18,6 +10,8 @@ fi
 	--without-tutorial
 
 export GNUTERM=dumb
-make PREFIX=$PREFIX
+# Fix iconv linkage
+sed -ie 's/\(^LIBS.*\)/\1 -liconv/g' src/Makefile
+make -j${CPU_COUNT} PREFIX=$PREFIX
 make check PREFIX=$PREFIX
 make install PREFIX=$PREFIX
