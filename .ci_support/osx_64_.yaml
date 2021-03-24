@@ -17,13 +17,13 @@ cxx_compiler_version:
 freetype:
 - '2'
 glib:
-- '2.66'
+- '2'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:
 - '6.2'
 pango:
-- '1.42'
+- '1.48'
 pin_run_as_build:
   cairo:
     max_pin: x.x
