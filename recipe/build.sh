@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [[ $(uname) == "Darwin" && $(uname -m) == "arm64" ]]; then
+set -x
+
+if [[ $target_platform == "osx-arm64" ]]; then
 	QT="--without-qt"
 else
 	QT="--with-qt=qt5"
