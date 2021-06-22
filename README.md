@@ -149,4 +149,5 @@ Feedstock Maintainers
 =====================
 
 * [@croth1](https://github.com/croth1/)
+* [@matthiasdiener](https://github.com/matthiasdiener/)
 
