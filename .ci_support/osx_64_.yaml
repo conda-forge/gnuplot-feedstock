@@ -33,14 +33,10 @@ pin_run_as_build:
     max_pin: x.x
   pango:
     max_pin: x.x
-  qt:
-    max_pin: x.x
   readline:
     max_pin: x
-qt:
-- '5.12'
 readline:
-- '8.0'
+- '8'
 target_platform:
 - osx-64
 zip_keys:
