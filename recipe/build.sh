@@ -8,10 +8,7 @@ else
 	QT="--with-qt=qt5"
 fi
 
-if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
-	# Docs can't be cross-built
-	sed -i.bak "s, docs , ," Makefile.in
-fi
+export CC_FOR_BUILD=$CC_FOR_BUILD
 
 ./configure \
 	--prefix=$PREFIX \
