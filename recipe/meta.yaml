@@ -31,13 +31,14 @@ requirements:
     - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
     - libxcb  # [linux]
     - pkg-config
+    - gnuconfig  # [unix]
   host:
     - ncurses
     - readline
     - libgd
     - cairo
     - pango
-    - qt
+    - qt  # [not (osx and arm64)]
     - freetype
     - glib
     - xorg-libX11  # [linux]
@@ -54,7 +55,7 @@ requirements:
     - libgd
     - cairo
     - pango
-    - qt
+    - qt  # [not (osx and arm64)]
     - freetype
     - glib
     - xorg-libX11  # [linux]
@@ -81,3 +82,4 @@ about:
 extra:
   recipe-maintainers:
     - croth1
+    - matthiasdiener
