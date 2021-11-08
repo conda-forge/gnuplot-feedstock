@@ -10,7 +10,8 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
 	--without-libcerf \
 	--with-qt=qt5 \
 	--with-readline=$PREFIX \
-	--without-tutorial
+	--without-tutorial \
+	--disable-dependency-tracking
 
 export GNUTERM=dumb
 # Fix iconv linkage
