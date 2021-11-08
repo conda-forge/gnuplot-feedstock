@@ -7,7 +7,7 @@ c_compiler_version:
 cairo:
 - '1.16'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -40,7 +40,7 @@ pin_run_as_build:
 qt:
 - '5.12'
 readline:
-- '8.0'
+- '8'
 target_platform:
 - osx-64
 zip_keys:
