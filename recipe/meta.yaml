@@ -32,6 +32,7 @@ requirements:
     - libxcb  # [linux]
     - pkg-config
     - gnuconfig  # [unix]
+    - make  # [unix]
   host:
     - ncurses
     - readline
