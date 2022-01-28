@@ -10,7 +10,7 @@ source:
   sha256: 51f89bbab90f96d3543f95235368d188eb1e26eda296912256abcd3535bd4d84
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
@@ -39,7 +39,8 @@ requirements:
     - libgd
     - cairo
     - pango
-    - qt
+    - qt  # [not (osx and arm64)]
+    - qt-main  # [osx and arm64]
     - freetype
     - glib
     - xorg-libX11  # [linux]
@@ -55,8 +56,8 @@ requirements:
     - readline
     - libgd
     - cairo
-    - pango
-    - qt
+    - qt  # [not (osx and arm64)]
+    - qt-main  # [osx and arm64]
     - freetype
     - glib
     - xorg-libX11  # [linux]
