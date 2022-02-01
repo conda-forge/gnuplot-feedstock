@@ -40,7 +40,6 @@ requirements:
     - cairo
     - pango
     - qt  # [not (osx and arm64)]
-    - qt-main  # [osx and arm64]
     - freetype
     - glib
     - xorg-libX11  # [linux]
@@ -57,7 +56,6 @@ requirements:
     - libgd
     - cairo
     - qt  # [not (osx and arm64)]
-    - qt-main  # [osx and arm64]
     - freetype
     - glib
     - xorg-libX11  # [linux]
