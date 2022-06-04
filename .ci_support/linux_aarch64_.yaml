@@ -39,12 +39,10 @@ pin_run_as_build:
     max_pin: x
   pango:
     max_pin: x.x
-  qt:
-    max_pin: x.x
   readline:
     max_pin: x
-qt:
-- '5.12'
+qt_main:
+- '5.15'
 readline:
 - '8'
 target_platform:
