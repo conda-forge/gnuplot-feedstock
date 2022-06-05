@@ -1,0 +1,44 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '11.0'
+c_compiler:
+- clang
+c_compiler_version:
+- '13'
+cairo:
+- '1.16'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- clangxx
+cxx_compiler_version:
+- '13'
+freetype:
+- '2'
+glib:
+- '2'
+macos_machine:
+- arm64-apple-darwin20.0.0
+ncurses:
+- '6'
+pango:
+- '1.50'
+pin_run_as_build:
+  cairo:
+    max_pin: x.x
+  freetype:
+    max_pin: x
+  pango:
+    max_pin: x.x
+  readline:
+    max_pin: x
+qt_main:
+- '5.15'
+readline:
+- '8'
+target_platform:
+- osx-arm64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
