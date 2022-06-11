@@ -16,8 +16,11 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
 export GNUTERM=dumb
 # Fix iconv linkage
 sed -ie 's/\(^LIBS.*\)/\1 -liconv/g' src/Makefile
-make -j${CPU_COUNT} PREFIX=$PREFIX
+
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+make -j${CPU_COUNT} PREFIX=$PREFIX
 make check PREFIX=$PREFIX
+else
+make -j${CPU_COUNT} -C src PREFIX=$PREFIX
 fi
 make install PREFIX=$PREFIX
