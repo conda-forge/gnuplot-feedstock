@@ -15,9 +15,9 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
      	--without-lua \
 	--without-latex \
 	--without-libcerf \
-	--without-qt5 \
+	--with-qt=no \
 	--without-readline \
-	--without-tutorial \
+	--with-tutorial=no \
 	--disable-dependency-tracking \
 	CC=$CC_FOR_BUILD \
         CXX=$CXX_FOR_BUILD \
@@ -40,7 +40,7 @@ fi
 	--without-libcerf \
 	--with-qt=qt5 \
 	--with-readline=$PREFIX \
-	--without-tutorial \
+	--with-tutorial=no \
 	--disable-dependency-tracking
 
 export GNUTERM=dumb
