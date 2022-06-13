@@ -7,8 +7,8 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
   # some tools are built and later executed in the build process
   # this requires a native build first
   ( 
-    mkdir build-native
-    cd build-native
+    mkdir -p build-native
+    pushd build-native
     LDFLAGS_FOR_BUILD=$(echo $LDFLAGS | sed "s?$PREFIX?$BUILD_PREFIX?g")
     LDFLAGS_LD_FOR_BUILD=$(echo $LDFLAGS_LD | sed "s?$PREFIX?$BUILD_PREFIX?g")
     ../configure --prefix="${BUILD_PREFIX}" \
@@ -29,7 +29,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
 
     make -j${CPU_COUNT} PREFIX=$BUILD_PREFIX
     make install PREFIX=$BUILD_PREFIX
-    cd ..
+    popd
   )
 fi
 
