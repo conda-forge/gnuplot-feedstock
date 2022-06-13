@@ -1,13 +1,11 @@
-diff --git a/docs/Makefile.am b/docs/Makefile.am
-index b20918ab0..7f831f115 100644
---- a/docs/Makefile.am
-+++ b/docs/Makefile.am
-@@ -268,7 +268,7 @@ doc2hlp_SOURCES = doc2hlp.c termdoc.c
+--- a/docs/Makefile.in	2022-06-13 11:44:59.000000000 +1000
++++ b/docs/Makefile.in	2022-06-13 11:45:40.000000000 +1000
+@@ -1175,7 +1175,7 @@
  gih: gnuplot.gih
  
  gnuplot.gih: doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc
 -	$(AM_V_GEN)./doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
-+	$(srcdir)/../build-native/docs/lib/doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
++	$(srcdir)/../build-native/docs/doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
  
- doc2gih_SOURCES = doc2gih.c termdoc.c
- 
+ # To include all terminals in the .gih file
+ allgih: alldoc2gih$(EXEEXT) $(srcdir)/gnuplot.doc
