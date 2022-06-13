@@ -33,6 +33,7 @@ requirements:
     - pkg-config
     - gnuconfig  # [unix]
     - make  # [unix]
+    - zlib  # [build_platform != target_platform]
   host:
     - ncurses
     - readline
