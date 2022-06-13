@@ -9,3 +9,17 @@
  
  # To include all terminals in the .gih file
  allgih: alldoc2gih$(EXEEXT) $(srcdir)/gnuplot.doc
+--- a/demo/Makefile.in	2022-06-13 12:45:01.000000000 +1000
++++ b/demo/Makefile.in	2022-06-13 12:45:13.000000000 +1000
+@@ -705,9 +705,9 @@
+ 
+ all: $(BINARY_FILES)
+ 
+-$(BINARY_FILES): ../src/bf_test
++$(BINARY_FILES): $(srcdir)/../build-native/src/bf_test
+ 	@echo Creating binary data files
+-	@../src/bf_test
++	@$(srcdir)/../build-native/src/bf_test
+ 
+ check-prepare:
+ 
