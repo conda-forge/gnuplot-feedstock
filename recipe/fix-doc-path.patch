@@ -1,13 +1,13 @@
 diff --git a/docs/Makefile.am b/docs/Makefile.am
-index f94eea28b..6f7a176ce 100644
+index b20918ab0..7f831f115 100644
 --- a/docs/Makefile.am
 +++ b/docs/Makefile.am
-@@ -300,7 +300,7 @@ doc2hlp_SOURCES = doc2hlp.c termdoc.c
+@@ -268,7 +268,7 @@ doc2hlp_SOURCES = doc2hlp.c termdoc.c
  gih: gnuplot.gih
  
  gnuplot.gih: doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc
--       $(AM_V_GEN)./doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
-+       $(srcdir)/../build-native/docs/lib/doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
+-	$(AM_V_GEN)./doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
++	$(srcdir)/../build-native/docs/lib/doc2gih$(EXEEXT) $(srcdir)/gnuplot.doc gnuplot.gih
  
  doc2gih_SOURCES = doc2gih.c termdoc.c
  
