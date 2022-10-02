@@ -5,7 +5,7 @@ c_compiler:
 c_compiler_version:
 - '10'
 cairo:
-- '1.16'
+- '1'
 cdt_arch:
 - aarch64
 cdt_name:
@@ -30,17 +30,6 @@ ncurses:
 - '6'
 pango:
 - '1.50'
-pin_run_as_build:
-  cairo:
-    max_pin: x.x
-  dbus:
-    max_pin: x
-  freetype:
-    max_pin: x
-  pango:
-    max_pin: x.x
-  readline:
-    max_pin: x
 qt_main:
 - '5.15'
 readline:
