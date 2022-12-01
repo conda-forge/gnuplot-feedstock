@@ -33,7 +33,7 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
   )
 fi
 
-if [[ $target_platform == "linux-ppc64le" ]];
+if [[ $target_platform == "linux-ppc64le" ]]; then
   QTVER=no
 else
   QTVER=qt5
