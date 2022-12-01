@@ -34,9 +34,9 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
 fi
 
 if [[ $target_platform == "linux-ppc64le" ]]; then
-  QTVER=no
+  BUILD_WITH_QTVER=no
 else
-  QTVER=qt5
+  BUILD_WITH_QTVER=qt5
 fi
 
 ./configure \
@@ -44,7 +44,7 @@ fi
 	--without-lua \
 	--without-latex \
 	--without-libcerf \
-	--with-qt=$QTVER \
+	--with-qt=$BUILD_WITH_QTVER \
 	--with-readline=$PREFIX \
 	--disable-dependency-tracking
 
