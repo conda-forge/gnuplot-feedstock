@@ -42,7 +42,7 @@ requirements:
     - libgd
     - cairo
     - pango
-    - qt-main
+    - qt-main  # [not ppc64le]
     - freetype
     - glib
     - xorg-libX11  # [linux]
@@ -59,7 +59,7 @@ requirements:
     - libgd
     - cairo
     - pango
-    - qt-main
+    - qt-main  # [not ppc64le]
     - freetype
     - glib
     - xorg-libX11  # [linux]
