@@ -6,7 +6,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* .
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
   # some tools are built and later executed in the build process
   # this requires a native build first
-  ( 
+  (
     mkdir -p build-native
     pushd build-native
     LDFLAGS_FOR_BUILD=$(echo $LDFLAGS | sed "s?$PREFIX?$BUILD_PREFIX?g")
@@ -33,12 +33,18 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
   )
 fi
 
+if [[ $target_platform == "linux-ppc64le" ]]; then
+  BUILD_WITH_QTVER=no
+else
+  BUILD_WITH_QTVER=qt5
+fi
+
 ./configure \
 	--prefix=$PREFIX \
 	--without-lua \
 	--without-latex \
 	--without-libcerf \
-	--with-qt=qt5 \
+	--with-qt=$BUILD_WITH_QTVER \
 	--with-readline=$PREFIX \
 	--disable-dependency-tracking
 
