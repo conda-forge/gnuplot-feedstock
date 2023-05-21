@@ -1,5 +1,5 @@
 {% set pkgname = "gnuplot" %}
-{% set version = "5.4.5" %}
+{% set version = "5.4.7" %}
 
 package:
   name: {{ pkgname }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://sourceforge.net/projects/{{ pkgname }}/files/{{ pkgname }}/{{ version }}/{{ pkgname }}-{{ version }}.tar.gz
-  sha256: 66f679115dd30559e110498fc94d926949d4d370b4999a042e724b8e910ee478
+  sha256: 318a1501c9e659f39cf05ee5268335671bddc6c20eae06851f262fde27c2e739
   patches:
     - fix-doc-path.patch  # [build_platform != target_platform]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
