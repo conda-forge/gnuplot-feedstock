@@ -53,6 +53,7 @@ requirements:
     - libxcb  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
+    - libiconv  # [linux]
   run:
     - ncurses
     - readline
@@ -69,6 +70,7 @@ requirements:
     - xorg-libxrender  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
+    - libiconv  # [linux]
 
 test:
   files:
