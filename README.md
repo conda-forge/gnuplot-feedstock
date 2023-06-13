@@ -1,11 +1,11 @@
-About gnuplot
-=============
+About gnuplot-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gnuplot-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/gnuplot/gnuplot
 
 Package license: Gnuplot
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gnuplot-feedstock/blob/main/LICENSE.txt)
 
 Summary: Gnuplot, plotting from command line
 
@@ -13,14 +13,7 @@ Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://app.travis-ci.com/conda-forge/gnuplot-feedstock">
-        <img alt="linux" src="https://img.shields.io/travis/com/conda-forge/gnuplot-feedstock/main.svg?label=Linux">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>
