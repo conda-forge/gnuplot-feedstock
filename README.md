@@ -1,11 +1,11 @@
-About gnuplot
-=============
+About gnuplot-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gnuplot-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/gnuplot/gnuplot
 
 Package license: Gnuplot
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gnuplot-feedstock/blob/main/LICENSE.txt)
 
 Summary: Gnuplot, plotting from command line
 
