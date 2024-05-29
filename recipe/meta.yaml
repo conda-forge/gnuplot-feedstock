@@ -1,5 +1,5 @@
 {% set pkgname = "gnuplot" %}
-{% set version = "5.4.8" %}
+{% set version = "6.0.1" %}
 
 package:
   name: {{ pkgname }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://sourceforge.net/projects/{{ pkgname }}/files/{{ pkgname }}/{{ version }}/{{ pkgname }}-{{ version }}.tar.gz
-  sha256: 931279c7caad1aff7d46cb4766f1ff41c26d9be9daf0bcf0c79deeee3d91f5cf
+  sha256: e85a660c1a2a1808ff24f7e69981ffcbac66a45c9dcf711b65610b26ea71379a
   patches:
     - fix-doc-path.patch  # [build_platform != target_platform]
 
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
