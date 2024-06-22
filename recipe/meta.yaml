@@ -37,6 +37,7 @@ requirements:
     - gnuconfig  # [unix]
     - make  # [unix]
     - zlib  # [build_platform != target_platform]
+    - libiconv  # [build_platform != target_platform]
   host:
     - ncurses
     - readline
@@ -54,22 +55,7 @@ requirements:
     - libxcb  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
-  run:
-    - ncurses
-    - readline
-    - libgd
-    - cairo
-    - pango
-    - qt-main  # [not ppc64le]
-    - freetype
-    - glib
-    - xorg-libX11  # [linux]
-    - xorg-libxt  # [linux]
-    - xorg-libxext  # [linux]
-    - chrpath  # [linux]
-    - xorg-libxrender  # [linux]
-    - gtk2  # [linux]
-    - dbus  # [linux]
+    - libiconv  # [linux]
 
 test:
   files:
