@@ -21,21 +21,26 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('expat') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
-    - {{ cdt('libxrender') }}  # [linux]
-    - {{ cdt('libxt') }}  # [linux]
-    - {{ cdt('libx11-devel') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - libxcb  # [linux]
+
     - pkg-config
     - gnuconfig  # [unix]
     - make  # [unix]
+    
+    - xorg-libxext  # [(build_platform != target_platform) and linux]
+    - xorg-libx11  # [(build_platform != target_platform) and linux]
+    - xorg-libxdamage  # [build_platform != target_platform]
+    - xorg-libxfixes  # [build_platform != target_platform]
+    - xorg-libxrender  # [build_platform != target_platform]
+    - xorg-libxt  # [build_platform != target_platform]
+    - xorg-libxxf86vm  # [build_platform != target_platform]
+    
     - zlib  # [build_platform != target_platform]
+<<<<<<< HEAD
+=======
+    - libiconv  # [build_platform != target_platform]
+    - libxcb  # [(build_platform != target_platform) and linux]
+
+>>>>>>> e5a3421 (maint: clean up cdt packages)
   host:
     - ncurses
     - readline
@@ -45,11 +50,18 @@ requirements:
     - qt-main  # [not ppc64le]
     - freetype
     - glib
-    - xorg-libX11  # [linux]
+
+    - xorg-libx11  # [linux]
     - xorg-libxt  # [linux]
     - xorg-libxext  # [linux]
-    - chrpath  # [linux]
     - xorg-libxrender  # [linux]
+    - xorg-libxdamage  # [linux]
+    - xorg-libxfixes  # [linux]
+    - xorg-libxrender  # [linux]
+    - xorg-libxt  # [linux]
+    - xorg-libxxf86vm  # [linux]
+
+    - chrpath  # [linux]
     - libxcb  # [linux]
     - gtk2  # [linux]
     - dbus  # [linux]
