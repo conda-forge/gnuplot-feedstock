@@ -22,6 +22,8 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
     pushd build-native
     LDFLAGS_FOR_BUILD=$(echo $LDFLAGS | sed "s?$PREFIX?$BUILD_PREFIX?g")
     LDFLAGS_LD_FOR_BUILD=$(echo $LDFLAGS_LD | sed "s?$PREFIX?$BUILD_PREFIX?g")
+    # CFLAGS -mcpu=power8 -mtune=power8 break the ppc64le build
+    CFLAGS_FOR_BUILD=$(echo $CFLAGS | sed -E 's?-mcpu=[^ ]+ ??; s?-mtune=[^ ]+ ??')
     ../configure --prefix="${BUILD_PREFIX}" \
      	--without-lua \
       --without-latex \
@@ -36,7 +38,8 @@ if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
       LD=${build_alias}-ld \
       RANLIB=${build_alias}-ranlib \
       LDFLAGS="$LDFLAGS_FOR_BUILD" \
-      LDFLAGS_LD="$LDFLAGS_LD_FOR_BUILD"
+      LDFLAGS_LD="$LDFLAGS_LD_FOR_BUILD" \
+      CFLAGS="$CFLAGS_FOR_BUILD"
    
     # Fix iconv linkage
     sed -ie 's/\(^LIBS.*\)/\1 -liconv/g' ./src/Makefile
