@@ -26,7 +26,6 @@ requirements:
     - pkg-config
     - gnuconfig  # [unix]
     - make  # [unix]
-    - zlib  # [build_platform != target_platform]
     - libiconv  # [build_platform != target_platform and linux]
 
   host:
