@@ -26,14 +26,8 @@ requirements:
     - pkg-config
     - gnuconfig  # [unix]
     - make  # [unix]
-    
-    - xorg-libx11  # [(build_platform != target_platform) and linux]
-    - xorg-libxdamage  # [build_platform != target_platform]
-    - xorg-libxfixes  # [build_platform != target_platform]
-    - xorg-libxxf86vm  # [build_platform != target_platform]
-    
     - zlib  # [build_platform != target_platform]
-    - libiconv  # [build_platform != target_platform]
+    - libiconv  # [build_platform != target_platform and linux]
 
   host:
     - readline
