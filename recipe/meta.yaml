@@ -12,63 +12,38 @@ source:
     - fix-doc-path.patch  # [build_platform != target_platform]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('expat') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
-    - {{ cdt('libxrender') }}  # [linux]
-    - {{ cdt('libxt') }}  # [linux]
-    - {{ cdt('libx11-devel') }}  # [linux]
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - libxcb  # [linux]
+
     - pkg-config
     - gnuconfig  # [unix]
     - make  # [unix]
-    - zlib  # [build_platform != target_platform]
+    - libiconv  # [build_platform != target_platform and linux]
+
   host:
-    - ncurses
     - readline
     - libgd
     - cairo
     - pango
     - qt-main  # [not ppc64le]
-    - freetype
     - glib
-    - xorg-libX11  # [linux]
-    - xorg-libxt  # [linux]
-    - xorg-libxext  # [linux]
+
+    - xorg-libx11  # [linux]
+    - xorg-libxdamage  # [linux]
+    - xorg-libxfixes  # [linux]
+    - xorg-libxxf86vm  # [linux]
+
     - chrpath  # [linux]
-    - xorg-libxrender  # [linux]
-    - libxcb  # [linux]
     - gtk2  # [linux]
-    - dbus  # [linux]
-  run:
-    - ncurses
-    - readline
-    - libgd
-    - cairo
-    - pango
-    - qt-main  # [not ppc64le]
-    - freetype
-    - glib
-    - xorg-libX11  # [linux]
-    - xorg-libxt  # [linux]
-    - xorg-libxext  # [linux]
-    - chrpath  # [linux]
-    - xorg-libxrender  # [linux]
-    - gtk2  # [linux]
-    - dbus  # [linux]
+    - libiconv  # [linux]
 
 test:
   files:
