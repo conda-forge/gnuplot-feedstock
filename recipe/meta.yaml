@@ -12,7 +12,7 @@ source:
     - fix-doc-path.patch  # [build_platform != target_platform]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
@@ -20,8 +20,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
 
     - pkg-config
     - gnuconfig  # [unix]
@@ -44,6 +42,7 @@ requirements:
     - chrpath  # [linux]
     - gtk2  # [linux]
     - libiconv  # [linux]
+    - libgl-devel                    # [linux]
 
 test:
   files:
