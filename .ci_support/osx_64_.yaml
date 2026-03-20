@@ -1,15 +1,15 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.13'
+- '11.0'
 MACOSX_SDK_VERSION:
-- '10.13'
+- '11.0'
 c_compiler:
 - clang
 c_compiler_version:
-- '16'
+- '19'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
-- '10.13'
+- '11.0'
 cairo:
 - '1'
 channel_sources:
@@ -19,13 +19,13 @@ channel_targets:
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
-- '16'
+- '19'
 glib:
 - '2'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 pango:
-- '1.50'
+- '1'
 qt_main:
 - '5.15'
 readline:
