@@ -31,6 +31,7 @@ requirements:
     - libgd
     - cairo
     - zlib
+    - expat
     - pango
     - qt-main  # [not ppc64le]
     - glib
