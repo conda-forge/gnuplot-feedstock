@@ -32,6 +32,7 @@ requirements:
     - cairo
     - zlib
     - expat
+    - freetype
     - pango
     - qt-main  # [not ppc64le]
     - glib
