@@ -20,6 +20,10 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '19'
+expat:
+- '2'
+freetype:
+- '2'
 glib:
 - '2'
 macos_machine:
