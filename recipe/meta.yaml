@@ -45,8 +45,6 @@ requirements:
     - chrpath  # [linux]
     - gtk2  # [linux]
     - libiconv  # [linux]
-    - zlib  # [linux]
-    - expat  # [linux]
     - libgl-devel  # [linux]
 
 test:
