@@ -24,7 +24,7 @@ requirements:
     - pkg-config
     - gnuconfig  # [unix]
     - make  # [unix]
-    - libiconv  # [build_platform != target_platform and linux]
+    - libiconv  # [linux]
 
   host:
     - readline
@@ -45,7 +45,8 @@ requirements:
     - chrpath  # [linux]
     - gtk2  # [linux]
     - libiconv  # [linux]
-    - libgl-devel                    # [linux]
+    - zlib  # [linux]
+    - libgl-devel  # [linux]
 
 test:
   files:
