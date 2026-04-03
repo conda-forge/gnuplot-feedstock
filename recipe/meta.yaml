@@ -12,7 +12,7 @@ source:
     - fix-doc-path.patch  # [build_platform != target_platform]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
@@ -30,6 +30,9 @@ requirements:
     - readline
     - libgd
     - cairo
+    - zlib
+    - expat
+    - freetype
     - pango
     - qt-main  # [not ppc64le]
     - glib
@@ -50,6 +53,7 @@ test:
   commands:
     - gnuplot -e "set terminal dumb; set style histogram; p 'test-data.txt'"
     - gnuplot -e "set terminal png"
+    - gnuplot -e "set terminal pdfcairo"
 
 about:
   home: https://github.com/gnuplot/gnuplot
