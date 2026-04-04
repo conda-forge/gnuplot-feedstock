@@ -10,8 +10,8 @@
  # To include all terminals in the .gih file
  allgih: alldoc2gih$(EXEEXT) $(srcdir)/gnuplot.doc
 --- a/demo/Makefile.in	2025-12-16 21:52:03
-+++ b/demo/Makefile.in	2026-04-04 00:02:13
-@@ -722,10 +722,10 @@
++++ b/demo/Makefile.in	2026-04-04 08:24:25
+@@ -722,11 +722,10 @@
  
  all: $(BINARY_FILES)
  
@@ -20,8 +20,9 @@
  	@echo Creating binary data files
 -	test "$(top_srcdir)" = "$(top_builddir)" || cp $(top_srcdir)/demo/dodecahedron.dat .
 -	@../src/bf_test
+-	test "$(top_srcdir)" = "$(top_builddir)" || rm -f ./dodecahedron.dat
 +	test "$(top_srcdir)" = "$(top_builddir)" || cp -f $(top_srcdir)/demo/dodecahedron.dat .
 +	@$(srcdir)/../build-native/src/bf_test
- 	test "$(top_srcdir)" = "$(top_builddir)" || rm -f ./dodecahedron.dat
  
  check-prepare:
+ 
