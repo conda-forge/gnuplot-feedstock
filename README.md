@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gnuplot-feedsto
 
 Home: https://github.com/gnuplot/gnuplot
 
-Package license: Gnuplot
+Package license: gnuplot
 
 Summary: Gnuplot, plotting from command line
 
