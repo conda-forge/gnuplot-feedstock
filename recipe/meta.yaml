@@ -34,13 +34,12 @@ requirements:
     - expat
     - freetype
     - pango
+    - libharfbuzz-devel
+    - libwebp-base
     - qt-main  # [not ppc64le]
     - glib
 
     - xorg-libx11  # [linux]
-    - xorg-libxdamage  # [linux]
-    - xorg-libxfixes  # [linux]
-    - xorg-libxxf86vm  # [linux]
 
     - chrpath  # [linux]
     - gtk2  # [linux]
