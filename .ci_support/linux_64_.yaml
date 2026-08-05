@@ -26,6 +26,8 @@ glib:
 - '2'
 libiconv:
 - '1'
+libwebp_base:
+- '1'
 pango:
 - '1'
 qt_main:

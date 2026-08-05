@@ -26,6 +26,8 @@ freetype:
 - '2'
 glib:
 - '2'
+libwebp_base:
+- '1'
 macos_machine:
 - arm64-apple-darwin20.0.0
 pango:
